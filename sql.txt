@@ -1,0 +1,19 @@
+CREATE DATABASE minecraft_website;
+
+USE minecraft_website;
+
+CREATE TABLE users (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    vip_status TINYINT(1) DEFAULT 0
+);
+
+CREATE TABLE donations (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(6) UNSIGNED,
+    amount DECIMAL(10, 2),
+    donation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

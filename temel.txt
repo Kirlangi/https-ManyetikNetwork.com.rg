@@ -1,0 +1,18 @@
+/minecraft-website
+    /assets
+        /css
+            styles.css
+        /js
+            script.js
+    /includes
+        db_connect.php
+        header.php
+        footer.php
+    /views
+        index.php
+        signup.php
+        login.php
+        dashboard.php
+        donate.php
+    /config
+        config.php
